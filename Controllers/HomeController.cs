@@ -29,25 +29,25 @@ namespace Proje008.Controllers
 
         public async Task<IActionResult> Hizmetlerimiz()
         {
-            return View(/*await _dbContext.Hizmetlerimiz.ToListAsync()*/);
+            return View(await _dbContext.Hizmetlerimizs.ToListAsync());
         }
 
 
         public async Task<IActionResult> Hakkımızda()
         {
-            return View(/*await _dbContext.Hakkımızda.ToListAsync()*/);
+            return View(await _dbContext.Hakkimizdas.ToListAsync());
         }
 
 
         public async Task<IActionResult> Projeler()
         {
-            return View(/*await _dbContext.Projeler.ToListAsync()*/);
+            return View(await _dbContext.Projelers.ToListAsync());
         }
 
 
-        public async Task<IActionResult> İletisim()
+        public ActionResult İletisim()
         {
-            return View(/*await _dbContext.İletisim.ToListAsync()*/);
+            return View();
         }
 
 

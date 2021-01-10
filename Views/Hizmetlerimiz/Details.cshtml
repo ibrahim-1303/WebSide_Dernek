@@ -1,0 +1,55 @@
+﻿@model Proje008.Models.Hizmetlerimiz
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detay</title>
+</head>
+<body>
+
+    <div>
+        <h4>Hizmetlerimiz</h4>
+        <hr />
+        <table class="table table-bordered table-striped">
+            <thead>
+
+
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.ResimYolu)</th>
+                    <td>
+                        <div class="gallerycontainer">
+                            <a class="thumbnail" href="#thumb"><img src="@("~/HizmetlerimizResimleri/"+Model.ResimYolu)" asp-append-version="true" width="100" height="66" border="0" /><span><img src="@("~/HizmetlerimizResimleri/"+Model.ResimYolu)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Baslik)</th>
+                    <td>@Html.DisplayFor(modelItem => Model.Baslik)</td>
+                </tr>
+                <tr>
+                    <th scope="row">@Html.DisplayNameFor(model => model.Aciklama)</th>
+                    <td>@Html.DisplayFor(modelItem => Model.Aciklama)</td>
+                </tr>
+                
+            <td>
+
+                <a asp-action="Edit" asp-route-id="@Model.Id">Değiştir</a> |
+                <a asp-action="Index">Geri Dön</a>
+            </td>
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model Proje008.Models.Hakkimizda
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sil</title>
+</head>
+<body>
+
+    <h3>Gerçekten Silmek İster misiniz?</h3>
+    <div>
+        <h4>Hakkimizda</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ResimYolu)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ResimYolu)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Baslik)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Baslik)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Aciklama)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            <a asp-action="Index">Geri Dön</a>
+        </form>
+    </div>
+</body>
+</html>

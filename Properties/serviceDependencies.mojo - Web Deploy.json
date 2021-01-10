@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sunucu1303/databases/Proje008_db",
+      "type": "mssql.azure",
+      "connectionId": "MojoDbContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

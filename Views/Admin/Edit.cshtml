@@ -1,0 +1,34 @@
+﻿@model Proje008.Models.Admin
+
+@{
+    Layout = "_LayoutAdmin";
+}
+<h4>Admin Bilgilerini Güncelle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden"  />
+            <div class="form-group">
+                <label asp-for="KullanıcıAdı" class="control-label">Kullanıcı Adı</label>
+                <input asp-for="KullanıcıAdı" class="form-control" />
+                <span asp-validation-for="KullanıcıAdı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sifre" class="control-label"></label>
+                <input asp-for="Sifre" class="form-control" />
+                <span asp-validation-for="Sifre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

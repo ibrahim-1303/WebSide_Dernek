@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Proje008.Models.Hizmetlerimiz>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+   
+</head>
+<body>
+
+   
+
+
+    <section class="service-section bg-grey padding">
+        <div class="dark-bg"></div>
+        <div class="section-heading dark-background text-center mb-40 wow fadeInUp" data-wow-delay="100ms">
+
+            <h2>Hizmetlerimiz</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+
+
+                    <div id="service-carousel" class="service-carousel box-shadow owl-carousel">
+                        @foreach (var item in Model)
+                        { 
+                            <div class="service-item">
+                                
+                                <div class="service-icon">
+                                    <i><img class="img-center" src="@("~/HizmetlerimizResimleri/" + item.ResimYolu)" alt="..." asp-append-version="true" /></i>
+                                </div>
+                                <h3>@item.Baslik</h3>
+                                <p>@item.Aciklama</p>
+                                <a asp-action="Hizmetlerimiz" class="read-more">Daha Fazla..</a>
+                                
+                            </div>
+                        }
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+          
+
+
+
+    </body>
+</html>
+

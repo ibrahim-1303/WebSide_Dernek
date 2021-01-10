@@ -1,0 +1,105 @@
+﻿@model Proje008.Models.Anasayfa
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yeni Oluştur</title>
+</head>
+<body>
+
+    <h4>Anasayfa</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label>Anasayfa Resimleri 1</label>
+                    <input asp-for="ResimDosyası" class="form-control" />
+                    <span asp-validation-for="ResimDosyası" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Anasayfa Resimleri 2</label>
+                    <input asp-for="ResimDosyası1" class="form-control" />
+                    <span asp-validation-for="ResimDosyası1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Anasayfa Resimleri 3</label>
+                    <input asp-for="ResimDosyası2" class="form-control" />
+                    <span asp-validation-for="ResimDosyası2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnasayfaBaslik" class="control-label"></label>
+                    <input asp-for="AnasayfaBaslik" class="form-control" />
+                    <span asp-validation-for="AnasayfaBaslik" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnasayfaAciklama" class="control-label"></label>
+                    <input asp-for="AnasayfaAciklama" class="form-control" />
+                    <span asp-validation-for="AnasayfaAciklama" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="AnasayfaBaslik2" class="control-label"></label>
+                    <input asp-for="AnasayfaBaslik2" class="form-control" />
+                    <span asp-validation-for="AnasayfaBaslik2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnasayfaAciklama2" class="control-label"></label>
+                    <input asp-for="AnasayfaAciklama2" class="form-control" />
+                    <span asp-validation-for="AnasayfaAciklama2" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Küçük Resim Ekle</label>
+                    <input asp-for="ResimDosyası3" class="form-control" />
+                    <span asp-validation-for="ResimDosyası3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Küçük Başlık</label>
+                    <input asp-for="AnasayfaBaslik3" class="form-control" />
+                    <span asp-validation-for="AnasayfaBaslik3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Küçük Açıklama</label>
+                    <input asp-for="AnasayfaAciklama3" class="form-control" />
+                    <span asp-validation-for="AnasayfaAciklama3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Küçük Resim Ekle 2</label>
+                    <input asp-for="ResimDosyası4" class="form-control" />
+                    <span asp-validation-for="ResimDosyası4" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Küçük Başlık 2</label>
+                    <input asp-for="AnasayfaBaslik4" class="form-control" />
+                    <span asp-validation-for="AnasayfaBaslik4" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Küçük Açıklama 2</label>
+                    <input asp-for="AnasayfaAciklama4" class="form-control" />
+                    <span asp-validation-for="AnasayfaAciklama4" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Geri Dön</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model Proje008.Models.NeSöylüyor
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sil</title>
+</head>
+<body>
+
+    <h3>Gerçekten Silmek İster misiniz?</h3>
+    <div>
+        <h4>NeSöylüyor</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ResimYolu)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ResimYolu)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Aciklama)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Ad)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Ad)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Meslek)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Meslek)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            <a asp-action="Index">Geri Dön</a>
+        </form>
+    </div>
+</body>
+</html>
